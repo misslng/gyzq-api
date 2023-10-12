@@ -40,7 +40,6 @@ public class SM4Util {
             byte[] v6 = v0.iv.getBytes();
             SM4 v7 = new SM4();
             v7.sm4SetKeyDec(v0, v5);
-            byte[] mock = {-116, -92, 52, 123, 52, -93, 66, -73, 112, 14, 81, 58, 40, 33, -92, 111, -22, 120, 119, -37, 72, 101, -38, 38, -62, 40, 120, 59, -43, -18, -73, -58, 111, -81, -16, -72, 50, -119, 120, -110, -33, -58, 40, 96, -45, -46, 114, -10, 108, 44, 119, 99, -5, -113, 111, 35, 26, 18, 76, -18, 69, 96, 26, 16};
             return !SM4Util.isCancelTrading || SM4Util.cancelOrderId == null ? new String(v7.sm4CryptCBC(v0, v6, Base64.decode(arg4, 2)), v0.charset).trim() : "{\"cljg\":[{\"code\":\"MP1B000000\",\"message\":\"成功\"}],\"htxx\":[{\"fhxx\":\"\",\"htxh\":\"\",\"wtxh\":\"" + SM4Util.cancelOrderId + "\"}]}";
         } catch (Exception v4) {
             v4.printStackTrace();
